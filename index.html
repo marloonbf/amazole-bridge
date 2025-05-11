@@ -119,9 +119,25 @@
     <img src="./Cabecalho.jpg" alt="Produto">
     <h1>AmazoLé - Clareador Natural</h1>
     <p>Este site utiliza cookies para melhorar sua experiência. Ao clicar em "Aceitar", você concorda com nossa política.</p>
-    <button onclick="window.location.href='https://ev.braip.com/ref?pv=progvj45&af=afiqemj3xm'">Aceitar</button>
+    <button onclick="return gtag_report_conversion('https://ev.braip.com/ref?pv=progvj45&af=afiqemj3xm')">Aceitar</button>
     <a href="#">Política de Privacidade</a>
   </div>
 
+  <!-- Google Conversion Event Snippet -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17048694370/7XQJCKihg8EaEOLcucE_',
+          'transaction_id': '',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 </body>
 </html>
